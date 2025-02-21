@@ -1,0 +1,21 @@
+name: shell command
+
+on: 
+  push:
+    branches:
+        - main
+
+jobs:
+    run-shell-commands:
+        runs-on: ubuntu-latest
+        steps:
+        - name: string
+          run: echo "welcome to my page"
+        - name: Multiline commands
+          run: |
+            npm -v
+            node-v
+
+
+
+

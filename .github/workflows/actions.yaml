@@ -1,19 +1,18 @@
-name: Action workflow
+name: Environment variable
 
 on:
     push:
         branches:
             - main
+env:
+    LIKE: Please, like, share 
+
 
 jobs:
-    run-github-actions:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Simple Javascript Action
-          id: hello
-          uses: actions/hello-world-javascript-action@v1
-          with:
-            who-to-greet: Tunzy
-            
-        - name: Get the output time
-          run: "${{ steps.hello.outputs.time }}"
+  My-channel:
+    runs-on: ubuntu-latest
+    env: 
+      SUBSCRIBE: Subscribe to my youtube channel
+    steps: 
+    - name: "Please like, share and subscribe to my youtube channel"
+      run: echo "$LIKE and $SUBSCRIBE"

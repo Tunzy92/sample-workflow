@@ -5,14 +5,13 @@ on:
         branches:
             - main
 env:
-    LIKE: Please, like, share 
+    LIKE: Please, like, share  
+    SUBSCRIBE: Subscribe to my youtube channel
 
 
 jobs:
   My-channel:
     runs-on: ubuntu-latest
-    env: 
-      SUBSCRIBE: Subscribe to my youtube channel
     steps: 
     - name: "Please like, share and subscribe to my youtube channel"
       run: echo "$LIKE and $SUBSCRIBE"

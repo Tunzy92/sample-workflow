@@ -15,3 +15,9 @@ jobs:
     steps: 
     - name: "Please like, share and subscribe to my youtube channel"
       run: echo "$LIKE and $SUBSCRIBE"
+
+    - name: "Testing Secret"
+      env:
+        SECRET: "${{ secrets.MY_SECRET}}"
+      run: |
+        echo "$SECRET"
